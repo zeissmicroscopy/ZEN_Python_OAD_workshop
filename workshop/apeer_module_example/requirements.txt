@@ -1,0 +1,8 @@
+apeer-dev-kit>=1.0.9,<2
+scikit-image
+numpy
+pylibczirw
+czitools
+tqdm
+
+
