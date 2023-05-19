@@ -16,7 +16,7 @@
 
 # General Remarks
 
-This repository contains all the material for the workshop held during the [CytoData2022] symposium.
+This repository contains all the material for the workshop held during the ZEN & Python & OAD Workshop.
 
 # Short Talk
 

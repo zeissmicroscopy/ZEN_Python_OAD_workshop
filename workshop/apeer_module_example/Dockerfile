@@ -1,5 +1,4 @@
 # The dockerfile begins with defining an image FROM which the build process starts.
-# We use python:3.7 as our base image.
 # You can find trusted docker contains at https://store.docker.com/.
 
 FROM python:3.9
