@@ -21,9 +21,7 @@ This repository contains all the material for the workshop held during the ZEN &
 
 ## Prerequisites
 
-All notebooks are supposed to be run in Google Colab in order to not rely on local python environments.
-
-If you prefer or have to run the notebooks locally it is recommended to create a fresh conda environment. Please feel to use the provided [YML file](workshop/notebooks/zen_python.yml) (at your own risk) to create such an environment:
+To run the notebooks locally it is recommended to create a fresh conda environment. Please feel to use the provided [YML file](workshop/notebooks/zen_python.yml) (at your own risk) to create such an environment:
 
     conda env create --file zen_python.yml
 
@@ -50,8 +48,7 @@ This package provides a simple and easy-to-use Python wrapper for [libCZI] - a c
 * If pylibCZIrw is extended in the future to support subblock-based access (e.g. accessing acquisition tiles), this API must not be altered.
 * The core concept of pylibCZIrw is focussing on reading and writing 2D image planes by specifying the dimension indices and its location in order to only read or write **what is really needed**.
 
-The basic usage can be inferred from this sample notebook:&nbsp;
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zeissmicroscopy/ZEN_Python_OAD_workshop/blob/main/workshop/notebooks/Using_pylibCZIrw_3_4_0.ipynb)
+* [Usage oy pylibCZIrw](./workshop/notebooks/Using_pylibCZIrw_3_4_0.ipynb)
 
 For more detailed information refer to the pylibCZIrw-documentation.html shipped with the source distribution of this package (see the **Download files** section).
 
