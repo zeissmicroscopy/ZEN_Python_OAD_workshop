@@ -4,9 +4,11 @@
   - [Read, process and write CZIs using pylibCZIrw and cztile](#read-process-and-write-czis-using-pylibczirw-and-cztile)
   - [Create a simple APEER Module](#create-a-simple-apeer-module)
   - [Train a Deep-Learning Model in APEER](#train-a-deep-learning-model-in-apeer)
-  - [Use the model in your python code or inside Napari](#use-the-model-in-your-python-code-or-inside-napari)
+  - [Use the model in your python code](#use-the-model-in-your-python-code)
   - [Use the model inside Napari (optional)](#use-the-model-inside-napari-optional)
   - [Train your own model and package it a using the czmodel package](#train-your-own-model-and-package-it-a-using-the-czmodel-package)
+  - [Using the czitools package (experimental)](#using-the-czitools-package-experimental)
+  - [Control ZEN via TCP-IP](#control-zen-via-tcp-ip)
 - [Disclaimer](#disclaimer)
 
 
@@ -37,7 +39,8 @@ The workshop is focusing on various tools and python packages published be ZEISS
 * Use the model in your python code
 * Use the model inside [Napari]
 * Train your own model and package it a using the [czmodel] package
-* Using [czitools] package (experimnetal)
+* Using [czitools] package (experimental)
+* Control ZEN via TCP-IP (experimental)
 
 ## Read, process and write CZIs using pylibCZIrw and cztile
 
@@ -87,12 +90,11 @@ Remark: To save time the modelfile: **cyto2022_nuc.czann** will be provided
 
 For more detailed information please visit: **[APEER Docs - Partial Annotations](https://docs.apeer.com/machine-learning/annotation-guidelines)**
 
-## Use the model in your python code or inside Napari
+## Use the model in your python code
 
 Once the model is trained it can be downloaded directly to your hard disk and used to segment images.
 
-Run a prediction using a *.czann file:&nbsp;
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zeissmicroscopy/ZEN_Python_OAD_workshop/blob/main/workshop/notebooks/run_prediction_from_czann.ipynb)
+* [Run a prediction using a *.czann file](./workshop/notebooks/run_prediction_from_czann.ipynb)
 
 ***
 
@@ -106,7 +108,7 @@ It can install it via [pip]:
 
 For more detailed information about the plugin please go to: [Napari Hub - napari-czann-segment](https://www.napari-hub.org/plugins/napari-czann-segment)
 
-![Train on arivsi Cloud and use model in Napari](https://github.com/sebi06/napari-czann-segment/raw/main/readme_images/Train_APEER_run_Napari_CZANN_no_highlights_small.gif)
+![Train on arivis Cloud and use model in Napari](https://github.com/sebi06/napari-czann-segment/raw/main/readme_images/Train_APEER_run_Napari_CZANN_no_highlights_small.gif)
 
 
 ***
@@ -117,12 +119,24 @@ The package provides simple-to-use conversion tools to generate a CZANN file fro
 [TensorFlow] or [ONNX] model that resides in memory or on disk to be usable in the
 ZEN, arivis Cloud, APEER, Vison4D software platforms and also in your own code. For details and more information examples please go to: [czmodel]
 
-Train a simple model and package as *.czann file:&nbsp;
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zeissmicroscopy/ZEN_Python_OAD_workshop/blob/main/workshop/notebooks/SingleClassSemanticSegmentation_PyTorch.ipynb)
+* [Train a simple model and package as *.czann file](./workshop/notebooks/SingleClassSemanticSegmentation_PyTorch.ipynb)
 
 ***
 
 ## Using the czitools package (experimental)
+
+For details please visit: [czitools]
+
+* [Read CZI metadata](./workshop/notebooks/read_czi_metadata.ipynb)
+
+* [Show CZI Planetable](./workshop/notebooks/show_czi_surface.ipynb)
+
+* [Save CZI as OME_ZARR](./workshop/notebooks/omezarr_from_czi_5d.ipynb)
+
+## Control ZEN via TCP-IP
+
+For details please check: [TCP-IP Interface](https://github.com/zeiss-microscopy/OAD/tree/master/Interfaces/TCP-IP_interface)
+
 
 # Disclaimer
 
