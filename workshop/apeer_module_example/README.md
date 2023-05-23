@@ -1,4 +1,4 @@
-## APEER Module Example: Filter CZI Image
+## Arivis Cloud (formerly APEER) Module Example: Filter CZI Image
 
 ### Introduction
 
@@ -14,11 +14,11 @@ The module consists of several files:
 
 * **[Dockerfile](Dockerfile)** A dockerfile is a script, composed of various commands to automatically perform actions on a base image in order to create a new docker image. The dockerfile, that comes with this example, is very well commented and is very easy to understand.
 
-* **[module_specification.json](module_specification.json)** This files defines the inputs and outputs as well as the ui components of the module. [More info](docs.apeer.com)
+* **[module_specification.json](module_specification.json)** This files defines the inputs and outputs as well as the ui components of the module. [More info](https://docs.apeer.com/)
 
-* **[apeer_main.py](apeer_main.py)** This is the entrypoint for the Apeer module. It calls the actual processing function in `_filter_image.py`
+* **[apeer_main.py](apeer_main.py)** This is the entrypoint for the module. It calls the actual processing function in `_filter_image.py`
 
-* **[apply_filter.py](apply_filter.py)** This is the file which contains the actual processing this module does. It can be used and tested independent of any APEER code.
+* **[apply_filter.py](apply_filter.py)** This is the file which contains the actual processing this module does. It can be used and tested independent of any arivis Cloud functionality.
 
 * **[requirements.txt](requirements.txt)** This file contains the list of libraries that are required by Python and that should be installed during the docker build process. You can see its use in DockerFile.
 
@@ -31,7 +31,7 @@ For more details and tutorial please visit the [APEER Docs](https://docs.apeer.c
 
 ### How to trigger a build
 
-Triggering a build of your module on APEER is quite simple. You just have to push some code on the master branch of your repository.
+Triggering a build of your module on arivis Cloud is quite simple. You just have to push some code on the master branch of your repository.
 
 ### Where do I see my build result
 
