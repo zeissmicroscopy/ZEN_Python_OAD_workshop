@@ -1,12 +1,10 @@
 - [General Remarks](#general-remarks)
-- [Workshop](#workshop)
   - [Prerequisites](#prerequisites)
   - [Content](#content)
   - [Read, process and write CZIs using pylibCZIrw and cztile](#read-process-and-write-czis-using-pylibczirw-and-cztile)
   - [Create a simple APEER Module](#create-a-simple-apeer-module)
   - [Train a Deep-Learning Model in APEER](#train-a-deep-learning-model-in-apeer)
   - [Use the model in your python code or inside Napari](#use-the-model-in-your-python-code-or-inside-napari)
-  - [Tile an array to apply a processing function using cztile package](#tile-an-array-to-apply-a-processing-function-using-cztile-package)
   - [Use the model inside Napari (optional)](#use-the-model-inside-napari-optional)
   - [Train your own model and package it a using the czmodel package](#train-your-own-model-and-package-it-a-using-the-czmodel-package)
 - [Disclaimer](#disclaimer)
@@ -18,8 +16,6 @@
 This repository contains all the material for the workshop held during the ZEN & Python & OAD Workshop.
 
 ***
-
-# Workshop
 
 ## Prerequisites
 
@@ -41,6 +37,7 @@ The workshop is focusing on various tools and python packages published be ZEISS
 * Use the model in your python code
 * Use the model inside [Napari]
 * Train your own model and package it a using the [czmodel] package
+* Using [czitools] package (experimnetal)
 
 ## Read, process and write CZIs using pylibCZIrw and cztile
 
@@ -51,7 +48,7 @@ This package provides a simple and easy-to-use Python wrapper for [libCZI] - a c
 * The core concept of pylibCZIrw is focussing on reading and writing 2D image planes by specifying the dimension indices and its location in order to only read or write **what is really needed**.
 
 The basic usage can be inferred from this sample notebook:&nbsp;
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zeissmicroscopy/zen_python_oad_workshop/blob/main/workshop/notebooks/Using_pylibCZIrw_3_4_0.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zeissmicroscopy/ZEN_Python_OAD_workshop/blob/main/workshop/notebooks/Using_pylibCZIrw_3_4_0.ipynb)
 
 For more detailed information refer to the pylibCZIrw-documentation.html shipped with the source distribution of this package (see the **Download files** section).
 
@@ -95,29 +92,9 @@ For more detailed information please visit: **[APEER Docs - Partial Annotations]
 Once the model is trained it can be downloaded directly to your hard disk and used to segment images.
 
 Run a prediction using a *.czann file:&nbsp;
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zeissmicroscopy/cytodata_2022_workshop/blob/main/workshop/notebooks/run_prediction_from_czann.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zeissmicroscopy/ZEN_Python_OAD_workshop/blob/main/workshop/notebooks/run_prediction_from_czann.ipynb)
 
 ***
-
-## Tile an array to apply a processing function using cztile package
-
-In order to apply a model to an image one typically has to tile the array. While there are many ways to achieve this, we @ZEISS mainly use the [cztile] package for that, which is also used inside the [Napari] plugin. The tiling strategy ensures that for a given total area with a minimal number of tiles of constant total area such that:
-
-- the image area is completely covered by tiles and is filled up with as few tiles as possible
-- the overlap/border between tiles is as small as possible, but it is ensured that at least a minimum border size is used
-- **all interior tiles have the same size**
-- a possible excess border is split among tiles and can lead to slightly different tile and border sizes at the edge
-- all interior tiles have at least a minimum border width/height on all sides
-- the edge tiles have zero border at the edge and at least the minimum border width on their inner sides.
-- The sizes of all non-zero borders differ at most by one pixel.
-
-It is not linked directly to the CZI file format, but can be of use to process such images in an efficient and **tile-wise** manner, which is especially important when dealing with larger images.
-
-![cztile - AlmostEqualBorderFixedTotalAreaStrategy2D](./workshop/notebooks/screenshots/cztile_algo.png)
-
-
-The basic usage can be inferred from this sample notebook:&nbsp;
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zeissmicroscopy/cytodata_2022_workshop/blob/main/workshop/notebooks/cztile_0_0_2.ipynb)
 
 ## Use the model inside Napari (optional)
 
@@ -129,7 +106,7 @@ It can install it via [pip]:
 
 For more detailed information about the plugin please go to: [Napari Hub - napari-czann-segment](https://www.napari-hub.org/plugins/napari-czann-segment)
 
-![Train on APEER and use model in Napari](https://github.com/sebi06/napari-czann-segment/raw/main/readme_images/Train_APEER_run_Napari_CZANN_no_highlights_small.gif)
+![Train on arivsi Cloud and use model in Napari](https://github.com/sebi06/napari-czann-segment/raw/main/readme_images/Train_APEER_run_Napari_CZANN_no_highlights_small.gif)
 
 
 ***
@@ -138,16 +115,14 @@ For more detailed information about the plugin please go to: [Napari Hub - napar
 
 The package provides simple-to-use conversion tools to generate a CZANN file from a [PyTorch], 
 [TensorFlow] or [ONNX] model that resides in memory or on disk to be usable in the
-ZEN, APEER, Vison4D software platforms and also in your own code. For details and more information examples please go to: [czmodel]
+ZEN, arivis Cloud, APEER, Vison4D software platforms and also in your own code. For details and more information examples please go to: [czmodel]
 
 Train a simple model and package as *.czann file:&nbsp;
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zeissmicroscopy/cytodata_2022_workshop/blob/main/workshop/notebooks/SingleClassSemanticSegmentation_PyTorch.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zeissmicroscopy/ZEN_Python_OAD_workshop/blob/main/workshop/notebooks/SingleClassSemanticSegmentation_PyTorch.ipynb)
 
 ***
 
-
-
-***
+## Using the czitools package (experimental)
 
 # Disclaimer
 
@@ -155,9 +130,9 @@ This content of this repository is free to use for everybody. Carl Zeiss Microsc
 
 **By using any of those examples you agree to this disclaimer.**
 
-Version: 2022.10.15
+Version: 2023.05.23
 
-Copyright (c) 2022 Carl Zeiss AG, Germany. All Rights Reserved.
+Copyright (c) 2023 Carl Zeiss AG, Germany. All Rights Reserved.
 
 
 [Napari]: https://github.com/napari/napari
@@ -174,3 +149,4 @@ Copyright (c) 2022 Carl Zeiss AG, Germany. All Rights Reserved.
 [ONNX]: https://onnx.ai/
 [libCZI]: https://github.com/ZEISS/libczi
 [CytoData2022]: https://alleninstitute.org/what-we-do/cell-science/events-training/cytodata-symposium-2022/
+[czitools]: https://pypi.org/project/czitools/
