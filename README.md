@@ -2,8 +2,8 @@
   - [Prerequisites](#prerequisites)
   - [Content](#content)
   - [Read, process and write CZIs using pylibCZIrw and cztile](#read-process-and-write-czis-using-pylibczirw-and-cztile)
-  - [Create a simple APEER Module](#create-a-simple-apeer-module)
-  - [Train a Deep-Learning Model in APEER](#train-a-deep-learning-model-in-apeer)
+  - [Create a simple arivis Cloud Module](#create-a-simple-arivis-cloud-module)
+  - [Train a Deep-Learning Model on arivis Cloud](#train-a-deep-learning-model-on-arivis-cloud)
   - [Use the model in your python code](#use-the-model-in-your-python-code)
   - [Use the model inside Napari (optional)](#use-the-model-inside-napari-optional)
   - [Train your own model and package it a using the czmodel package](#train-your-own-model-and-package-it-a-using-the-czmodel-package)
@@ -53,39 +53,39 @@ This package provides a simple and easy-to-use Python wrapper for [libCZI] - a c
 For more detailed information refer to the pylibCZIrw-documentation.html shipped with the source distribution of this package (see the **Download files** section).
 
 
-## Create a simple APEER Module
+## Create a simple arivis Cloud Module
 
 the [arivisCloud] platform does not allow to train deep learning models but also has tools to create so-called arivis Cloud modules and even workflows built upon a container infrastructure.
 
 ![arivis Cloud Architecture](./images/apeer_architecture.png)
 
-In short - APEER modules are Docker containers with a UI specification that allows using them on APEER or inside the ZEN software platform. For details please visit: **[APEER Architecture and Modules](https://docs.apeer.com/create-modules/the-apeer-architecture)**
+In short - arivis Cloud modules are Docker containers with a UI specification that allows using them in the cloud and inside the ZEN software platform. For details please visit: **[arivis Cloud - Architecture and Modules](https://docs.apeer.com/create-modules/the-apeer-architecture)**
 
-![APEER Module - UI Creation](./images/apeer_module_ui.png)
+![Module - UI Creation](./images/apeer_module_ui.png)
 
-A simple example module based on python can be found here: **[APEER - Simple Python Module](./workshop/apeer_module_example/README.md)**
+A simple example module based on python can be found here: **[arivis Cloud - Simple Python Module](./workshop/apeer_module_example/README.md)**
 
-Please follow the instruction on how to create an [APEER] module using the built-in documentation and copy this code into your own module repository.
+Please follow the instruction on how to create an [arivisCloud] module using the built-in documentation and copy this code into your own module repository.
 
-## Train a Deep-Learning Model in APEER
+## Train a Deep-Learning Model on arivis Cloud
 
 The general idea is to learn how to label a dataset on [arivisCloud] which will be shared among the participants.
 
 Dataset Name: **cyto2022_nuclei**
 
-![Annotated Dataset on APEER](./images/apeer_dataset_nuc.png)
+![Annotated Dataset](./images/apeer_dataset_nuc.png)
 
 * label some nuclei "precisely"
 * label background areas and edges
 * embrace the idea of partial labeling
 
-![Partial Annotation on APEER](./images/APEER_annotation_auto_background.gif)
+![Partial Annotations](./images/APEER_annotation_auto_background.gif)
 
 * start a training to get a trained model as a *.czann file
 
 Remark: To save time the modelfile: **cyto2022_nuc.czann** will be provided
 
-For more detailed information please visit: **[APEER Docs - Partial Annotations](https://docs.apeer.com/machine-learning/annotation-guidelines)**
+For more detailed information please visit: **[Docs - Partial Annotations](https://docs.apeer.com/machine-learning/annotation-guidelines)**
 
 ## Use the model in your python code
 
