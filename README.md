@@ -69,7 +69,7 @@ Please follow the instruction on how to create an [arivis Cloud] module using th
 
 ## Train a Deep-Learning Model on arivis Cloud
 
-The general idea is to learn how to label a dataset on [arivisCloud] which will be shared among the participants.
+The general idea is to learn how to label a dataset on [arivis Cloud] which will be shared among the participants.
 
 Dataset Name: **cyto2022_nuclei**
 
@@ -114,7 +114,7 @@ For more detailed information about the plugin please go to: [Napari Hub - napar
 
 The package provides simple-to-use conversion tools to generate a CZANN file from a [PyTorch], 
 [TensorFlow] or [ONNX] model that resides in memory or on disk to be usable in the
-ZEN, arivis Cloud, APEER, Vison4D software platforms and also in your own code. For details and more information examples please go to: [czmodel]
+ZEN, arivis Cloud, arivisPro software platforms and also in your own code. For details and more information examples please go to: [czmodel]
 
 * [Train a simple model and package as *.czann file](./workshop/notebooks/SingleClassSemanticSegmentation_PyTorch.ipynb)
 
