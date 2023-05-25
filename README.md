@@ -48,7 +48,7 @@ This package provides a simple and easy-to-use Python wrapper for [libCZI] - a c
 * If pylibCZIrw is extended in the future to support subblock-based access (e.g. accessing acquisition tiles), this API must not be altered.
 * The core concept of pylibCZIrw is focussing on reading and writing 2D image planes by specifying the dimension indices and its location in order to only read or write **what is really needed**.
 
-* [Usage oy pylibCZIrw](./workshop/notebooks/Using_pylibCZIrw_3_4_0.ipynb)
+* [Jupyter Notebook - Usage oy pylibCZIrw](./workshop/notebooks/Using_pylibCZIrw_3_4_0.ipynb)
 
 For more detailed information refer to the pylibCZIrw-documentation.html shipped with the source distribution of this package (see the **Download files** section).
 
@@ -59,11 +59,11 @@ the [arivis Cloud] platform does not allow to train deep learning models but als
 
 ![arivis Cloud Architecture](./images/apeer_architecture.png)
 
-In short - arivis Cloud modules are Docker containers with a UI specification that allows using them in the cloud and inside the ZEN software platform. For details please visit: **[arivis Cloud - Architecture and Modules](https://docs.apeer.com/create-modules/the-apeer-architecture)**
+In short - arivis Cloud modules are Docker containers with a UI specification that allows using them in the cloud and inside the ZEN software platform. For details please visit: [arivis Cloud - Architecture and Modules](https://docs.apeer.com/create-modules/the-apeer-architecture)
 
 ![Module - UI Creation](./images/apeer_module_ui.png)
 
-A simple example module based on python can be found here: **[arivis Cloud - Simple Python Module](./workshop/apeer_module_example/README.md)**
+A simple example module based on python can be found here: [arivis Cloud - Simple Python Module](./workshop/apeer_module_example/README.md)
 
 Please follow the instruction on how to create an [arivis Cloud] module using the built-in documentation and copy this code into your own module repository.
 
@@ -85,13 +85,13 @@ Dataset Name: **cyto2022_nuclei**
 
 Remark: To save time the modelfile: **cyto2022_nuc.czann** will be provided
 
-For more detailed information please visit: **[Docs - Partial Annotations](https://docs.apeer.com/machine-learning/annotation-guidelines)**
+For more detailed information please visit: [Docs - Partial Annotations](https://docs.apeer.com/machine-learning/annotation-guidelines)
 
 ## Use the model in your python code
 
 Once the model is trained it can be downloaded directly to your hard disk and used to segment images.
 
-* [Run a prediction using a *.czann file](./workshop/notebooks/run_prediction_from_czann.ipynb)
+* [Jupyter Notebook - Run a prediction using a *.czann file](./workshop/notebooks/run_prediction_from_czann.ipynb)
 
 ***
 
@@ -116,7 +116,7 @@ The package provides simple-to-use conversion tools to generate a CZANN file fro
 [TensorFlow] or [ONNX] model that resides in memory or on disk to be usable in the
 ZEN, arivis Cloud, arivisPro software platforms and also in your own code. For details and more information examples please go to: [czmodel]
 
-* [Train a simple model and package as *.czann file](./workshop/notebooks/SingleClassSemanticSegmentation_PyTorch.ipynb)
+* [Jupyter Notebook - Train a simple model and package as *.czann file](./workshop/notebooks/SingleClassSemanticSegmentation_PyTorch.ipynb)
 
 ***
 
@@ -124,15 +124,15 @@ ZEN, arivis Cloud, arivisPro software platforms and also in your own code. For d
 
 For details please visit: [czitools]
 
-* [Read CZI metadata](./workshop/notebooks/read_czi_metadata.ipynb)
+* [Jupyter Notebook - Read CZI metadata](./workshop/notebooks/read_czi_metadata.ipynb)
 
-* [Show CZI Planetable](./workshop/notebooks/show_czi_surface.ipynb)
+* [Jupyter Notebook - Show CZI Planetable](./workshop/notebooks/show_czi_surface.ipynb)
 
-* [Save CZI as OME_ZARR](./workshop/notebooks/omezarr_from_czi_5d.ipynb)
+* [Jupyter Notebook - Save CZI as OME_ZARR](./workshop/notebooks/omezarr_from_czi_5d.ipynb)
 
 ## Control ZEN via TCP-IP
 
-For details please check: [TCP-IP Interface](https://github.com/zeiss-microscopy/OAD/tree/master/Interfaces/TCP-IP_interface)
+For details please check: [ZEN - TCP-IP Interface](https://github.com/zeiss-microscopy/OAD/tree/master/Interfaces/TCP-IP_interface)
 
 
 # Disclaimer
