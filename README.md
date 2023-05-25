@@ -32,8 +32,8 @@ To run the notebooks locally it is recommended to create a fresh conda environme
 The workshop is focusing on various tools and python packages published be ZEISS for reading CZI images, exchanging Deep-Learning models and general image processing The following topics will be covered:
 
 * Read, process and write CZIs using [pylibCZIrw] and [cztile]
-* Create a simple [arivisCloud] Module
-* Train a Deep-Learning Model in [arivisCloud]
+* Create a simple [arivis Cloud] Module
+* Train a Deep-Learning Model in [arivis Cloud]
 * Use the model in your python code
 * Use the model inside [Napari]
 * Train your own model and package it a using the [czmodel] package
@@ -55,7 +55,7 @@ For more detailed information refer to the pylibCZIrw-documentation.html shipped
 
 ## Create a simple arivis Cloud Module
 
-the [arivisCloud] platform does not allow to train deep learning models but also has tools to create so-called arivis Cloud modules and even workflows built upon a container infrastructure.
+the [arivis Cloud] platform does not allow to train deep learning models but also has tools to create so-called arivis Cloud modules and even workflows built upon a container infrastructure.
 
 ![arivis Cloud Architecture](./images/apeer_architecture.png)
 
@@ -65,7 +65,7 @@ In short - arivis Cloud modules are Docker containers with a UI specification th
 
 A simple example module based on python can be found here: **[arivis Cloud - Simple Python Module](./workshop/apeer_module_example/README.md)**
 
-Please follow the instruction on how to create an [arivisCloud] module using the built-in documentation and copy this code into your own module repository.
+Please follow the instruction on how to create an [arivis Cloud] module using the built-in documentation and copy this code into your own module repository.
 
 ## Train a Deep-Learning Model on arivis Cloud
 
@@ -152,7 +152,7 @@ Copyright (c) 2023 Carl Zeiss AG, Germany. All Rights Reserved.
 [pylibCZIrw]: https://pypi.org/project/pylibCZIrw/
 [czmodel]: https://pypi.org/project/czmodel/
 [cztile]: https://pypi.org/project/cztile/
-[arivisCloud]: https://www.apeer.com
+[arivis Cloud]: https://www.apeer.com
 [napari-czann-segment]: https://github.com/sebi06/napari_czann_segment
 [CZI]: https://www.zeiss.com/microscopy/int/products/microscope-software/zen/czi.html
 [PyTorch]: https://pytorch.org/
