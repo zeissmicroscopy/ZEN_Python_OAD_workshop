@@ -11,8 +11,6 @@
   - [Control ZEN via TCP-IP](#control-zen-via-tcp-ip)
 - [Disclaimer](#disclaimer)
 
-
-
 # General Remarks
 
 This repository contains all the material for the workshop held during the ZEN & Python & OAD Workshop.
@@ -31,27 +29,26 @@ To run the notebooks locally it is recommended to create a fresh conda environme
 
 The workshop is focusing on various tools and python packages published be ZEISS for reading CZI images, exchanging Deep-Learning models and general image processing The following topics will be covered:
 
-* Read, process and write CZIs using [pylibCZIrw] and [cztile]
-* Create a simple [arivis Cloud] Module
-* Train a Deep-Learning Model in [arivis Cloud]
-* Use the model in your python code
-* Use the model inside [Napari]
-* Train your own model and package it a using the [czmodel] package
-* Using [czitools] package (experimental)
-* Control ZEN via TCP-IP (experimental)
+- Read, process and write CZIs using [pylibCZIrw] and [cztile]
+- Create a simple [arivis Cloud] Module
+- Train a Deep-Learning Model in [arivis Cloud]
+- Use the model in your python code
+- Use the model inside [Napari]
+- Train your own model and package it a using the [czmodel] package
+- Using [czitools] package (experimental)
+- Control ZEN via TCP-IP (experimental)
 
 ## Read, process and write CZIs using pylibCZIrw and cztile
 
 This package provides a simple and easy-to-use Python wrapper for [libCZI] - a cross-platform C++ library to read and write multi-dimensional CZI image documents.
 
-* At the moment, **pylibCZIrw** completely abstracts away the subblock concept, both in the reading and in the writing APIs.
-* If pylibCZIrw is extended in the future to support subblock-based access (e.g. accessing acquisition tiles), this API must not be altered.
-* The core concept of pylibCZIrw is focussing on reading and writing 2D image planes by specifying the dimension indices and its location in order to only read or write **what is really needed**.
+- At the moment, **pylibCZIrw** completely abstracts away the subblock concept, both in the reading and in the writing APIs.
+- If pylibCZIrw is extended in the future to support subblock-based access (e.g. accessing acquisition tiles), this API must not be altered.
+- The core concept of pylibCZIrw is focussing on reading and writing 2D image planes by specifying the dimension indices and its location in order to only read or write **what is really needed**.
 
-* [Jupyter Notebook - Usage oy pylibCZIrw](./workshop/notebooks/Using_pylibCZIrw_3_4_0.ipynb)
+- [Jupyter Notebook - Usage oy pylibCZIrw](./workshop/notebooks/Using_pylibCZIrw.ipynb)
 
 For more detailed information refer to the pylibCZIrw-documentation.html shipped with the source distribution of this package (see the **Download files** section).
-
 
 ## Create a simple arivis Cloud Module
 
@@ -75,13 +72,13 @@ Dataset Name: **cyto2022_nuclei**
 
 ![Annotated Dataset](./images/apeer_dataset_nuc.png)
 
-* label some nuclei "precisely"
-* label background areas and edges
-* embrace the idea of partial labeling
+- label some nuclei "precisely"
+- label background areas and edges
+- embrace the idea of partial labeling
 
 ![Partial Annotations](./images/APEER_annotation_auto_background.gif)
 
-* start a training to get a trained model as a *.czann file
+- start a training to get a trained model as a *.czann file
 
 Remark: To save time the modelfile: **cyto2022_nuc.czann** will be provided
 
@@ -91,7 +88,7 @@ For more detailed information please visit: [Docs - Partial Annotations](https:/
 
 Once the model is trained it can be downloaded directly to your hard disk and used to segment images.
 
-* [Jupyter Notebook - Run a prediction using a *.czann file](./workshop/notebooks/run_prediction_from_czann.ipynb)
+- [Jupyter Notebook - Run a prediction using a *.czann file](./workshop/notebooks/run_prediction_from_czann.ipynb)
 
 ***
 
@@ -107,7 +104,6 @@ For more detailed information about the plugin please go to: [Napari Hub - napar
 
 ![Train on arivis Cloud and use model in Napari](https://github.com/sebi06/napari-czann-segment/raw/main/readme_images/Train_APEER_run_Napari_CZANN_no_highlights_small.gif)
 
-
 ***
 
 ## Train your own model and package it a using the czmodel package
@@ -116,7 +112,7 @@ The package provides simple-to-use conversion tools to generate a CZANN file fro
 [TensorFlow] or [ONNX] model that resides in memory or on disk to be usable in the
 ZEN, arivis Cloud, arivisPro software platforms and also in your own code. For details and more information examples please go to: [czmodel]
 
-* [Jupyter Notebook - Train a simple model and package as *.czann file](./workshop/notebooks/SingleClassSemanticSegmentation_PyTorch.ipynb)
+- [Jupyter Notebook - Train a simple model and package as *.czann file](./workshop/notebooks/SingleClassSemanticSegmentation_PyTorch.ipynb)
 
 ***
 
@@ -124,16 +120,19 @@ ZEN, arivis Cloud, arivisPro software platforms and also in your own code. For d
 
 For details please visit: [czitools]
 
-* [Jupyter Notebook - Read CZI metadata](./workshop/notebooks/read_czi_metadata.ipynb)
+- [Jupyter Notebook - Read CZI metadata](./workshop/notebooks/read_czi_metadata.ipynb)
 
-* [Jupyter Notebook - Show CZI Planetable](./workshop/notebooks/show_czi_surface.ipynb)
+- [Jupyter Notebook - Read CZI pixeldata](./workshop/notebooks/read_czi_pixeldata.ipynb)
 
-* [Jupyter Notebook - Save CZI as OME_ZARR](./workshop/notebooks/omezarr_from_czi_5d.ipynb)
+- [Jupyter Notebook - Show CZI Planetable](./workshop/notebooks/show_czi_surface.ipynb)
+
+- [Jupyter Notebook - Save CZI as OME_ZARR](./workshop/notebooks/omezarr_from_czi_5d.ipynb)
+
+- [Jupyter Notebook - Save CZI with ZSTD compression](./workshop/notebooks/save_with_ZSTD_compression.ipynb)
 
 ## Control ZEN via TCP-IP
 
 For details please check: [ZEN - TCP-IP Interface](https://github.com/zeiss-microscopy/OAD/tree/master/Interfaces/TCP-IP_interface)
-
 
 # Disclaimer
 
@@ -141,10 +140,9 @@ This content of this repository is free to use for everybody. Carl Zeiss Microsc
 
 **By using any of those examples you agree to this disclaimer.**
 
-Version: 2023.05.23
+Version: 2023.09.22
 
 Copyright (c) 2023 Carl Zeiss AG, Germany. All Rights Reserved.
-
 
 [Napari]: https://github.com/napari/napari
 [pip]: https://pypi.org/project/pip/

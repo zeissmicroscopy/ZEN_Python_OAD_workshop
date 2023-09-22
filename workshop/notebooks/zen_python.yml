@@ -12,7 +12,7 @@ channels:
   - defaults
   - conda-forge
 dependencies:
-  - python=3.9
+  - python=3.10
   - conda
   - docutils
   - pip
@@ -31,8 +31,9 @@ dependencies:
       - opencv-python
       - onnxruntime-gpu
       - opencv-python
-      - aicsimageio[all]
+      - aicsimageio
       - aicspylibczi
+      - fsspec>=2022.8.0
       - pylibCZIrw
       - cztile
       - czitools
@@ -51,7 +52,7 @@ dependencies:
       - scikit-image
       - pooch
       - requests
-      - tifffile>=2023.4.12
+      #- tifffile>=2023.4.12
       
 
 # Create an environment
