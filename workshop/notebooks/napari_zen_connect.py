@@ -41,9 +41,9 @@ from PyQt5.QtGui import QFont
 
 import napari
 import numpy as np
-from czitools import pylibczirw_metadata as czimd
-from czitools import pylibczirw_tools as czird
-from czitools import misc, napari_tools
+from czitools import metadata_tools as czimd
+from czitools import read_tools as czird
+from czitools import misc_tools, napari_tools
 import os
 from zencontrol import ZenExperiment, ZenDocuments
 from typing import List, Dict, Tuple, Optional, Type, Any, Union, Mapping
@@ -64,7 +64,16 @@ class OptionsWidget(QWidget):
         self.cbox_openczi.setStyleSheet(
             "font:bold;" "font-size: 10px;" "width :14px;" "height :14px;"
         )
+
+                # add checkbox to open CZI after the experiment execution
+        self.cbox_usedask = QCheckBox("Read CZI using Dask (lazy load)", self)
+        self.cbox_usedask.setChecked(True)
+        self.cbox_usedask.setStyleSheet(
+            "font:bold;" "font-size: 10px;" "width :14px;" "height :14px;"
+        )
+        
         self.grid_opt.addWidget(self.cbox_openczi, 0, 0)
+        self.grid_opt.addWidget(self.cbox_usedask, 0, 1)
 
 
 class StartExperiment(QWidget):
@@ -121,7 +130,6 @@ class StartExperiment(QWidget):
         self.startexpbutton.setText("Running ...")
 
         # not nice, but this "redraws" the button
-        # QtCore.QApplication.processEvents()
         QtWidgets.QApplication.processEvents()
 
         # initialize the experiment with parameters
@@ -140,12 +148,19 @@ class StartExperiment(QWidget):
         # not nice, but this "redraws" the button
         QtWidgets.QApplication.processEvents()
 
+        #open_czi = OptionsWidget.
+
         # open the just acquired CZI and show it inside napari viewer
+
+        print("Open CZI Image in Napari :", checkboxes.cbox_openczi.isChecked())
+        print("Use Dask (lazy load)     :", checkboxes.cbox_usedask.isChecked())
+
         if self.saved_czifilepath is not None:
-            open_image_stack(self.saved_czifilepath)
+            if checkboxes.cbox_openczi.isChecked():
+                open_image_stack(self.saved_czifilepath, checkboxes.cbox_usedask.isChecked())
 
 
-def open_image_stack(filepath: str):
+def open_image_stack(filepath: str, use_dask: bool = False):
     """Open a CZI file using pylibCZIrw and display it using napari
 
     :param path: filepath of the image
@@ -160,8 +175,8 @@ def open_image_stack(filepath: str):
         # return array with dimension order STZCYXA
         array6d, mdata, dimstring6d = czird.read_6darray(filepath,
                                                          dimorder="STCZYX",
-                                                         output_dask=False,
-                                                         remove_Adim=True)
+                                                         use_dask=use_dask,
+                                                         chunk_zyx=False)
 
         # show array inside napari viewer
         layers = napari_tools.show(

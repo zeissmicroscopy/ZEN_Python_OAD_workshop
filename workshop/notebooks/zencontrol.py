@@ -62,7 +62,7 @@ class ZenExperiment():
 
         # in case the czi does already exist do nothing
         if self.cziname in czifiles_short:
-            print('CZI already exits. Choose a different name.')
+            print('CZI already exits inside:', self.savefolder, 'Choose a different name.')
             return None
 
         # in case the czi does not already exist
