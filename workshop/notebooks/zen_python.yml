@@ -25,6 +25,10 @@ dependencies:
   - nb_conda_kernels
   - pytest
   - ipyfilechooser
+  - pyopencl
+  #- ocl-icd-system # sometime for linux users
+  #- oclgrind # for windows if no OpenCL compatible GPU is available
+  #- pocl # for Linux if no OpenCL compatible GPU is available
 
   - pip:
       - czmodel[pytorch]>=5
@@ -37,6 +41,7 @@ dependencies:
       - pylibCZIrw
       - cztile
       - czitools
+      - pyclesperanto-prototype
       - napari[all]
       - napari-czann-segment
       - napari-aicsimageio
