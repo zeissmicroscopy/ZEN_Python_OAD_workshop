@@ -54,7 +54,7 @@ This package provides a simple and easy-to-use Python wrapper for [libCZI] - a c
 - The core concept of pylibCZIrw is focussing on reading and writing 2D image planes by specifying the dimension indices and its location in order to only read or write **what is really needed**.
 
 The basic usage can be inferred from this sample notebook:
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zeiss-microscopy/OAD/blob/master/jupyter_notebooks/pylibCZIrw/pylibCZIrw_3_3_0.ipynb) 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zeissmicroscopy/ZEN_Python_OAD_workshop/blob/main/workshop/notebooks/using_pylibCZIrw.ipynb)
 
 For more detailed information refer to the pylibCZIrw-documentation.html shipped with the source distribution of this package (see the **Download files** section).
 
