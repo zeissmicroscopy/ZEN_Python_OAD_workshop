@@ -163,3 +163,4 @@ cython_debug/
 **/data/inputs/*.xml
 **/data/inputs/*.csv
 **/notebooks/*.html
+/workshop/notebooks/newCZI_zloc.czi
