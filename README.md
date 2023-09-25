@@ -8,13 +8,13 @@
   - [Use the model inside Napari (optional)](#use-the-model-inside-napari-optional)
   - [Train your own model and package it a using the czmodel package](#train-your-own-model-and-package-it-a-using-the-czmodel-package)
   - [Using the czitools package (experimental)](#using-the-czitools-package-experimental)
-  - [Colab Notebooks](#colab-notebooks)
-    - [Read CZI metadata](#read-czi-metadata)
-    - [Read CZI pixeldata](#read-czi-pixeldata)
-    - [Write OME-ZARR from 5D CZI image data](#write-ome-zarr-from-5d-czi-image-data)
-    - [Write CZI using ZSTD compression](#write-czi-using-zstd-compression)
-    - [Show planetable of a CZI image as surface](#show-planetable-of-a-czi-image-as-surface)
-    - [Read a CZI and segment using Voroni-Otsu provided by PyClesperanto GPU processing](#read-a-czi-and-segment-using-voroni-otsu-provided-by-pyclesperanto-gpu-processing)
+    - [Demo Notebooks using czitools](#demo-notebooks-using-czitools)
+      - [Read CZI metadata](#read-czi-metadata)
+      - [Read CZI pixeldata](#read-czi-pixeldata)
+      - [Write OME-ZARR from 5D CZI image data](#write-ome-zarr-from-5d-czi-image-data)
+      - [Write CZI using ZSTD compression](#write-czi-using-zstd-compression)
+      - [Show planetable of a CZI image as surface](#show-planetable-of-a-czi-image-as-surface)
+      - [Read a CZI and segment using Voroni-Otsu provided by PyClesperanto GPU processing](#read-a-czi-and-segment-using-voroni-otsu-provided-by-pyclesperanto-gpu-processing)
   - [Control ZEN via TCP-IP](#control-zen-via-tcp-ip)
 - [Disclaimer](#disclaimer)
 
@@ -128,37 +128,30 @@ ZEN, arivis Cloud, arivisPro software platforms and also in your own code. For d
 
 For details please visit: [czitools]
 
-## Colab Notebooks
+### Demo Notebooks using [czitools]
 
-### Read CZI metadata
+#### Read CZI metadata
 
-The basic usage can be inferred from this sample notebook:&nbsp;
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sebi06/czitools/blob/main/demo/notebooks/read_czi_metadata.ipynb)
 
-### Read CZI pixeldata
+#### Read CZI pixeldata
 
-The basic usage can be inferred from this sample notebook:&nbsp;
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sebi06/czitools/blob/main/demo/notebooks/read_czi_pixeldata.ipynb)
 
-### Write OME-ZARR from 5D CZI image data
+#### Write OME-ZARR from 5D CZI image data
 
-The basic usage can be inferred from this sample notebook:&nbsp;
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sebi06/czitools/blob/main/demo/notebooks/omezarr_from_czi_5d.ipynb)
 
+#### Write CZI using ZSTD compression
 
-### Write CZI using ZSTD compression
-
-The basic usage can be inferred from this sample notebook:&nbsp;
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sebi06/czitools/blob/main/demo/notebooks/save_with_ZSTD_compression.ipynb)
 
-### Show planetable of a CZI image as surface
+#### Show planetable of a CZI image as surface
 
-The basic usage can be inferred from this sample notebook:&nbsp;
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sebi06/czitools/blob/main/demo/notebooks/show_czi_surface.ipynb)
 
-### Read a CZI and segment using Voroni-Otsu provided by PyClesperanto GPU processing
+#### Read a CZI and segment using Voroni-Otsu provided by PyClesperanto GPU processing
 
-The basic usage can be inferred from this sample notebook:&nbsp;
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sebi06/czitools/blob/main/demo/notebooks/read_czi_segment_voroni_otsu.ipynb)
 
 
