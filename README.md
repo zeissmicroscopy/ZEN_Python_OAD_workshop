@@ -5,8 +5,8 @@
   - [Create a simple arivis Cloud Module](#create-a-simple-arivis-cloud-module)
   - [Train a Deep-Learning Model on arivis Cloud](#train-a-deep-learning-model-on-arivis-cloud)
     - [Use the model in your python code](#use-the-model-in-your-python-code)
-  - [Train your own models in Python and store as \*.czann](#train-your-own-models-in-python-and-store-as-czann)
-  - [Train your own model and package it a using the czmodel package](#train-your-own-model-and-package-it-a-using-the-czmodel-package)
+  - [Train your own model and package (as \*.czann) using the czmodel package](#train-your-own-model-and-package-as-czann-using-the-czmodel-package)
+    - [Train a simple model for semantic segmentation](#train-a-simple-model-for-semantic-segmentation)
     - [Train a simple model for regression](#train-a-simple-model-for-regression)
   - [Use the model inside Napari (optional)](#use-the-model-inside-napari-optional)
   - [Using the czitools package (experimental)](#using-the-czitools-package-experimental)
@@ -101,13 +101,16 @@ Once the model is trained it can be downloaded directly to your hard disk and us
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zeissmicroscopy/ZEN_Python_OAD_workshop/blob/main/workshop/notebooks/run_prediction_from_czann.ipynb)
 
-## Train your own models in Python and store as *.czann
 
-## Train your own model and package it a using the czmodel package
+## Train your own model and package (as *.czann) using the [czmodel] package
 
 The package provides simple-to-use conversion tools to generate a CZANN file from a [PyTorch], 
 [TensorFlow] or [ONNX] model that resides in memory or on disk to be usable in the
-ZEN, arivis Cloud, arivisPro software platforms and also in your own code. For details and more information examples please go to: [czmodel]
+ZEN, arivis Cloud, arivisPro software platforms and also in your own code.
+
+For details and more information examples please go to: [czmodel]
+
+### Train a simple model for semantic segmentation
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zeissmicroscopy/ZEN_Python_OAD_workshop/blob/main/workshop/notebooks/SingleClassSemanticSegmentation_PyTorch.ipynb)
 
