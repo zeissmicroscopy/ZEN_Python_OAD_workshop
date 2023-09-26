@@ -32,7 +32,11 @@ To run the notebooks locally it is recommended to create a fresh conda environme
 
     conda env create --file zen_python.yml
 
-> Important: If one wants to test the labeling & training directly on [arivis Cloud] or create a module it is required to have an account. To use [Colab] one needs to have a Google account.
+> Important: If one wants to test the labeling & training directly on [arivis Cloud] or create a module it is required to have an account.
+> 
+> To use [Colab] one needs to have a Google account.
+>
+> To test and run an Arivis Cloud module locally one needs [Docker Desktop] or an equivivalent runtime installed
 
 ## Content
 
@@ -59,11 +63,11 @@ The basic usage can be inferred from this sample notebook:&nbsp;
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zeissmicroscopy/ZEN_Python_OAD_workshop/blob/main/workshop/notebooks/using_pylibCZIrw.ipynb)
 
-For more detailed information refer to the pylibCZIrw-documentation.html shipped with the source distribution of this package (see the **Download files** section).
+For more detailed information refer to the pylibCZIrw-documentation.html shipped with the source distribution of this package.
 
 ## Create a simple arivis Cloud Module
 
-the [arivis Cloud] platform does not allow to train deep learning models but also has tools to create so-called arivis Cloud modules and even workflows built upon a container infrastructure.
+The [arivis Cloud] platform does not allow to train deep learning models but also has tools to create so-called arivis Cloud modules and even workflows built upon a container infrastructure.
 
 ![arivis Cloud Architecture](./images/apeer_architecture.png)
 
@@ -91,7 +95,7 @@ Dataset Name: **cyto2022_nuclei**
 
 - start a training to get a trained model as a *.czann file
 
-Remark: To save time the modelfile: **cyto2022_nuc.czann** will be provided
+Remark: The the modelfile: **cyto2022_nuc.czann** can be found inside the repository.
 
 For more detailed information please visit: [Docs - Partial Annotations](https://docs.apeer.com/machine-learning/annotation-guidelines)
 
@@ -192,3 +196,4 @@ Copyright (c) 2023 Carl Zeiss AG, Germany. All Rights Reserved.
 [libCZI]: https://github.com/ZEISS/libczi/
 [czitools]: https://pypi.org/project/czitools/
 [Colab]: https://colab.research.google.com/
+[Docker Desktop]: https://www.docker.com/products/docker-desktop/
