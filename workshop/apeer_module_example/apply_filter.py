@@ -1,7 +1,7 @@
 import os
 from pylibCZIrw import czi as pyczi
-from czitools import pylibczirw_metadata as czimd
-from czitools import misc
+from czitools import metadata_tools as czimd
+from czitools import misc_tools as misc
 from skimage.morphology import disk, rectangle
 from skimage import filters
 import os
