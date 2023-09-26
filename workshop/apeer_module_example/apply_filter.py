@@ -8,6 +8,7 @@ import os
 import numpy as np
 from tqdm.contrib.itertools import product
 from typing import List, Dict, Tuple, Optional, Type, Any, Union
+from pathlib import Path
 
 
 def execute(image_path, filtertype: str = "Median",
@@ -103,10 +104,18 @@ def _filter_image(image2d,
 # Test Code locally
 if __name__ == "__main__":
 
-    #filename = r"input/Osteosarcoma_01.czi"
-    filename = r"input/T=6_Z=15_CH=2.czi"
+    #filename = r"Osteosarcoma_01.czi"
+    filename = r"T=6_Z=15_CH=2.czi"
 
-    out = execute(filename,
+    # get the current working directory
+    directory = Path(os.getcwd())
+
+    # find the path mathcing the input file and get the path as a string
+    d1 = list(directory.rglob("*/input/" + filename))
+    file2open = str(d1[0])
+
+    # execute the main function of the module
+    out = execute(file2open,
                   filtertype="Median",
                   kernelsize=5)
 
