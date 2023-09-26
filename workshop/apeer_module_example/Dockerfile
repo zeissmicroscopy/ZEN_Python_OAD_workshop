@@ -1,7 +1,7 @@
 # The dockerfile begins with defining an image FROM which the build process starts.
 # You can find trusted docker contains at https://store.docker.com/.
 
-FROM python:3.9
+FROM python:3.10
 
 # WORKDIR changes the active directory of the container to a specific location.
 # In case you need to run commands from or in a particular location.

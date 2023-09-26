@@ -1,4 +1,4 @@
-**How to test your module locally**
+# How to test your module locally**
 
 1. First place the test files inside the correct folder
 2. Navigate to the GIT repository and build the docker container
