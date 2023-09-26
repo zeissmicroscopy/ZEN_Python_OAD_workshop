@@ -28,11 +28,11 @@ This repository contains all the material for the workshop held during the ZEN &
 
 ## Prerequisites
 
-To run the notebooks locally it is recommended to create a fresh conda environment. Please feel to use the provided [YML file](workshop/notebooks/zen_python.yml) (at your own risk) to create such an environment:
+To run the notebooks locally it is recommended to create a fresh conda environment. Please feel to use the provided [YML file](workshop/zen_python.yml) (at your own risk) to create such an environment:
 
     conda env create --file zen_python.yml
 
-> Important: If one wants to test the labeling & training directly on [arivis Cloud] or create a module it is required to have an account.
+> Important: If one wants to test the labeling & training directly on [arivis Cloud] or create a module it is required to have an account. To use [Colab] one needs to have a Google account.
 
 ## Content
 
@@ -45,7 +45,7 @@ The workshop is focusing on various tools and python packages published be ZEISS
 - Use the model inside [Napari]
 - Train your own model and package it a using the [czmodel] package
 - Using [czitools] package (experimental)
-- Control ZEN via TCP-IP (experimental)
+- Control ZEN via TCP-IP (experimental) from [Napari]
 
 ## Read, process and write CZIs using pylibCZIrw
 
@@ -100,7 +100,6 @@ For more detailed information please visit: [Docs - Partial Annotations](https:/
 Once the model is trained it can be downloaded directly to your hard disk and used to segment images.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zeissmicroscopy/ZEN_Python_OAD_workshop/blob/main/workshop/notebooks/run_prediction_from_czann.ipynb)
-
 
 ## Train your own model and package (as *.czann) using the [czmodel] package
 
@@ -164,7 +163,6 @@ For details please visit: [czitools]
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sebi06/czitools/blob/main/demo/notebooks/read_czi_segment_voroni_otsu.ipynb)
 
-
 ## Control ZEN via TCP-IP
 
 For details please check: [ZEN - TCP-IP Interface](https://github.com/zeiss-microscopy/OAD/tree/master/Interfaces/TCP-IP_interface)
@@ -175,7 +173,7 @@ This content of this repository is free to use for everybody. Carl Zeiss Microsc
 
 **By using any of those examples you agree to this disclaimer.**
 
-Version: 2023.09.22
+Version: 2023.09.26
 
 Copyright (c) 2023 Carl Zeiss AG, Germany. All Rights Reserved.
 
@@ -191,6 +189,6 @@ Copyright (c) 2023 Carl Zeiss AG, Germany. All Rights Reserved.
 [PyTorch]: https://pytorch.org/
 [TensorFlow]: https://www.tensorflow.org/
 [ONNX]: https://onnx.ai/
-[libCZI]: https://github.com/ZEISS/libczi
-[CytoData2022]: https://alleninstitute.org/what-we-do/cell-science/events-training/cytodata-symposium-2022/
+[libCZI]: https://github.com/ZEISS/libczi/
 [czitools]: https://pypi.org/project/czitools/
+[Colab]: https://colab.research.google.com/

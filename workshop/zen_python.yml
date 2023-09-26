@@ -57,8 +57,6 @@ dependencies:
       - scikit-image
       - pooch
       - requests
-      #- tifffile>=2023.4.12
-      
 
 # Create an environment
 # conda env create --file zen_python.yml
