@@ -2,7 +2,6 @@
   - [Prerequisites](#prerequisites)
   - [Content](#content)
   - [Read, process and write CZIs using pylibCZIrw](#read-process-and-write-czis-using-pylibczirw)
-  - [Create a simple arivis Cloud Module](#create-a-simple-arivis-cloud-module)
   - [Train a Deep-Learning Model on arivis Cloud](#train-a-deep-learning-model-on-arivis-cloud)
     - [Use the model in your python code](#use-the-model-in-your-python-code)
   - [Train your own model and package (as \*.czann) using the czmodel package](#train-your-own-model-and-package-as-czann-using-the-czmodel-package)
@@ -18,6 +17,7 @@
       - [Show planetable of a CZI image as surface](#show-planetable-of-a-czi-image-as-surface)
       - [Read a CZI and segment using Voroni-Otsu provided by PyClesperanto GPU processing](#read-a-czi-and-segment-using-voroni-otsu-provided-by-pyclesperanto-gpu-processing)
   - [Control ZEN via TCP-IP](#control-zen-via-tcp-ip)
+  - [Create a simple arivis Cloud Module](#create-a-simple-arivis-cloud-module)
 - [Disclaimer](#disclaimer)
 
 # General Remarks
@@ -64,20 +64,6 @@ The basic usage can be inferred from this sample notebook:&nbsp;
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zeissmicroscopy/ZEN_Python_OAD_workshop/blob/main/workshop/notebooks/using_pylibCZIrw.ipynb)
 
 For more detailed information refer to the pylibCZIrw-documentation.html shipped with the source distribution of this package.
-
-## Create a simple arivis Cloud Module
-
-The [arivis Cloud] platform does not allow to train deep learning models but also has tools to create so-called arivis Cloud modules and even workflows built upon a container infrastructure.
-
-![arivis Cloud Architecture](./images/apeer_architecture.png)
-
-In short - arivis Cloud modules are Docker containers with a UI specification that allows using them in the cloud and inside the ZEN software platform. For details please visit: [arivis Cloud - Architecture and Modules](https://docs.apeer.com/create-modules/the-apeer-architecture)
-
-![Module - UI Creation](./images/apeer_module_ui.png)
-
-A simple example module based on python can be found here: [arivis Cloud - Simple Python Module](./workshop/apeer_module_example/README.md)
-
-Please follow the instruction on how to create an [arivis Cloud] module using the built-in documentation and copy this code into your own module repository.
 
 ## Train a Deep-Learning Model on arivis Cloud
 
@@ -170,6 +156,20 @@ For details please visit: [czitools]
 ## Control ZEN via TCP-IP
 
 For details please check: [ZEN - TCP-IP Interface](https://github.com/zeiss-microscopy/OAD/tree/master/Interfaces/TCP-IP_interface)
+
+## Create a simple arivis Cloud Module
+
+The [arivis Cloud] platform does not allow to train deep learning models but also has tools to create so-called arivis Cloud modules and even workflows built upon a container infrastructure.
+
+![arivis Cloud Architecture](./images/apeer_architecture.png)
+
+In short - arivis Cloud modules are Docker containers with a UI specification that allows using them in the cloud and inside the ZEN software platform. For details please visit: [arivis Cloud - Architecture and Modules](https://docs.apeer.com/create-modules/the-apeer-architecture)
+
+![Module - UI Creation](./images/apeer_module_ui.png)
+
+A simple example module based on python can be found here: [arivis Cloud - Simple Python Module](./workshop/apeer_module_example/README.md)
+
+Please follow the instruction on how to create an [arivis Cloud] module using the built-in documentation and copy this code into your own module repository.
 
 # Disclaimer
 
