@@ -165,11 +165,11 @@ Please check the respective code: [napari_zen_connect.py](./workshop/notebooks/n
 
 The [arivis Cloud] platform does not allow to train deep learning models but also has tools to create so-called arivis Cloud modules and even workflows built upon a container infrastructure.
 
-![arivis Cloud Architecture](./images/apeer_architecture.png)
+![arivis Cloud Architecture](./images/apeer_architecture2.png)
 
 In short - arivis Cloud modules are Docker containers with a UI specification that allows using them in the cloud and inside the ZEN software platform. For details please visit: [arivis Cloud - Architecture and Modules](https://docs.apeer.com/create-modules/the-apeer-architecture)
 
-![Module - UI Creation](./images/apeer_module_ui.png)
+![Module - UI Creation](./images/apeer_module_ui2.png)
 
 A simple example module based on python can be found here: [arivis Cloud - Simple Python Module](./workshop/apeer_module_example/README.md)
 
