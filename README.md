@@ -156,6 +156,11 @@ For details please check: [ZEN - TCP-IP Interface](https://github.com/zeiss-micr
 
 THis repo contains an example on how to control ZEN from Napari. It allows to start an experiment and remotely and open the CZI inside the Napari viewer
 
+Please check the respective code: [napari_zen_connect.py](./workshop/notebooks/napari_zen_connect.py)
+
+> Important: This requires that one has a real or simulated microscope controlled by ZEN that can actually execute the experiment
+
+
 ## Create a simple arivis Cloud Module
 
 The [arivis Cloud] platform does not allow to train deep learning models but also has tools to create so-called arivis Cloud modules and even workflows built upon a container infrastructure.
