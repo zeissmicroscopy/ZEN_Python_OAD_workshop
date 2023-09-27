@@ -28,7 +28,7 @@ This repository contains all the material for the workshop held during the ZEN &
 
 ## Prerequisites
 
-To run the notebooks locally it is recommended to create a fresh conda environment. Please feel to use the provided [YML file](workshop/zen_python.yml) (at your own risk) to create such an environment:
+To run the notebooks locally it is recommended to create a fresh conda environment. Please feel free to use the provided [YML file](workshop/zen_python.yml) (at your own risk) to create such an environment:
 
     conda env create --file zen_python.yml
 
