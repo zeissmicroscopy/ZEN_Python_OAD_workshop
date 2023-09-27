@@ -7,7 +7,7 @@
 docker build -t sebi06/apeer_simplepython:latest .
 ```
 
-3. Run the container using the input specified inside the wfe.env file
+3. Run the container using the input specified files and parameters inside the wfe.env file
 
 ```JSON
 WFE_INPUT_JSON={"input_image":"/input/T=6_Z=15_CH=2.czi", "filtertype":"Median", "filter_kernel_size":5, "WFE_output_params_file":"/output.json"}
