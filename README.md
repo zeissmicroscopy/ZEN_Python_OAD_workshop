@@ -40,14 +40,13 @@ To run the notebooks locally it is recommended to create a fresh conda environme
 
 ## Content
 
-The workshop is focusing on various tools and python packages published be ZEISS for reading CZI images, exchanging Deep-Learning models and general image processing The following topics will be covered:
+The workshop is focusing on various tools and python packages published by ZEISS for reading CZI images, exchanging Deep-Learning models and general image processing tasks. The following topics will be covered:
 
 - Read, process and write CZIs using [pylibCZIrw] and [cztile]
-- Create a simple [arivis Cloud] Module
-- Train a Deep-Learning Model in [arivis Cloud]
+- Train your own model and package it a using the [czmodel] package
+- Train a Deep-Learning Model on the  [arivis Cloud] platform
 - Use the model in your python code
 - Use the model inside [Napari]
-- Train your own model and package it a using the [czmodel] package
 - Using [czitools] package (experimental)
 - Control ZEN via TCP-IP (experimental) from [Napari]
 
@@ -55,8 +54,6 @@ The workshop is focusing on various tools and python packages published be ZEISS
 
 This package provides a simple and easy-to-use Python wrapper for [libCZI] - a cross-platform C++ library to read and write multi-dimensional CZI image documents.
 
-- At the moment, **pylibCZIrw** completely abstracts away the subblock concept, both in the reading and in the writing APIs.
-- If pylibCZIrw is extended in the future to support subblock-based access (e.g. accessing acquisition tiles), this API must not be altered.
 - The core concept of pylibCZIrw is focussing on reading and writing 2D image planes by specifying the dimension indices and its location in order to only read or write **what is really needed**.
 
 The basic usage can be inferred from this sample notebook:&nbsp;
@@ -67,7 +64,7 @@ For more detailed information refer to the pylibCZIrw-documentation.html shipped
 
 ## Train a Deep-Learning Model on arivis Cloud
 
-The general idea is to learn how to label a dataset on [arivis Cloud] which will be shared among the participants.
+The general idea is to learn how to label a dataset on [arivis Cloud].
 
 Dataset Name: **cyto2022_nuclei**
 
@@ -87,7 +84,7 @@ For more detailed information please visit: [Docs - Partial Annotations](https:/
 
 ### Use the model in your python code
 
-Once the model is trained it can be downloaded directly to your hard disk and used to segment images.
+Once the model is trained it can be downloaded directly to your hard disk and used to segment images in ZEN or arivis Pro or your own python code.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zeissmicroscopy/ZEN_Python_OAD_workshop/blob/main/workshop/notebooks/run_prediction_from_czann.ipynb)
 
@@ -177,7 +174,7 @@ This content of this repository is free to use for everybody. Carl Zeiss Microsc
 
 **By using any of those examples you agree to this disclaimer.**
 
-Version: 2023.09.26
+Version: 2023.09.27
 
 Copyright (c) 2023 Carl Zeiss AG, Germany. All Rights Reserved.
 
