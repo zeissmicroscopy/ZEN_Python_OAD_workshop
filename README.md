@@ -154,6 +154,8 @@ For details please visit: [czitools]
 
 For details please check: [ZEN - TCP-IP Interface](https://github.com/zeiss-microscopy/OAD/tree/master/Interfaces/TCP-IP_interface)
 
+THis repo contains an example on how to control ZEN from Napari. It allows to start an experiment and remotely and open the CZI inside the Napari viewer
+
 ## Create a simple arivis Cloud Module
 
 The [arivis Cloud] platform does not allow to train deep learning models but also has tools to create so-called arivis Cloud modules and even workflows built upon a container infrastructure.
@@ -170,7 +172,7 @@ Please follow the instruction on how to create an [arivis Cloud] module using th
 
 # Disclaimer
 
-This content of this repository is free to use for everybody. Carl Zeiss Microscopy GmbH's ZEN software undertakes no warranty concerning the use of those scripts, image analysis settings and ZEN experiments. Use them on your own risk.
+This content of this repository is free to use for everybody and purely experimental. Carl Zeiss Microscopy GmbH's ZEN software undertakes no warranty concerning the use of those scripts, image analysis settings and ZEN experiments, especially not for the examples using 3rd python modules. Use them on your own risk.
 
 **By using any of those examples you agree to this disclaimer.**
 
