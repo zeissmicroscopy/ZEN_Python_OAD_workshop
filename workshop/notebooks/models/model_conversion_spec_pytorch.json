@@ -1,0 +1,13 @@
+{
+  "ModelMetadata": {
+    "Type": "SingleClassSemanticSegmentation",
+    "Classes": ["Background", "Nucleus"],
+    "InputShape": [512, 512, 1],
+    "OutputShape": [512, 512, 2],
+    "ModelName": "Nuclei Segmentation Model From JSON",
+    "MinOverlap": [64, 64],
+    "Scaling": [1.0, 1.0]
+  },
+  "ModelPath": "./models/saved_torch_segmentation_model.pt",
+  "LicenseFile": null
+}
