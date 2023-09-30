@@ -164,3 +164,9 @@ cython_debug/
 **/data/inputs/*.csv
 **/notebooks/*.html
 /workshop/notebooks/newCZI_zloc.czi
+/workshop/notebooks/newCZI_compressed.czi
+/workshop/notebooks/newczi_mdata.czi
+/workshop/notebooks/newCZI_scenes.czi
+/workshop/notebooks/newczi_tilewise.czi
+/workshop/notebooks/newCZI_uncompressed.czi
+/workshop/notebooks/newCZI_z=16_ch=3.czi
