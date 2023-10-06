@@ -56,8 +56,9 @@ The workshop is focusing on various tools and python packages published by ZEISS
 - Train a Deep-Learning Model on the  [arivis Cloud] platform
 - Use the model in your python code
 - Use the model inside [Napari]
-- Using [czitools] package (experimental)
-- Control ZEN via TCP-IP (experimental) from [Napari]
+- Using [czitools] package
+- Control ZEN via TCP-IP from [Napari]
+- Create a simple [arivis Cloud] module to use your own code in ZEN
 
 ## Read, process and write CZIs using pylibCZIrw
 
@@ -99,9 +100,7 @@ Once the model is trained it can be downloaded directly to your hard disk and us
 
 ## Train your own model and package (as *.czann) using the [czmodel] package
 
-The package provides simple-to-use conversion tools to generate a CZANN file from a [PyTorch], 
-[TensorFlow] or [ONNX] model that resides in memory or on disk to be usable in the
-ZEN, arivis Cloud, arivisPro software platforms and also in your own code.
+The package provides simple-to-use conversion tools to generate a CZANN file from a [PyTorch], [TensorFlow] or [ONNX] model that resides in memory or on disk to be usable in the ZEN, arivis Cloud, arivisPro software platforms and also in your own code.
 
 For details and more information examples please go to: [czmodel]
 
