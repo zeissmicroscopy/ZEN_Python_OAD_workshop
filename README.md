@@ -1,6 +1,7 @@
+- [Disclaimer](#disclaimer)
 - [General Remarks](#general-remarks)
-  - [Prerequisites](#prerequisites)
-  - [Content](#content)
+- [Prerequisites](#prerequisites)
+- [Content](#content)
   - [Read, process and write CZIs using pylibCZIrw](#read-process-and-write-czis-using-pylibczirw)
   - [Train a Deep-Learning Model on arivis Cloud](#train-a-deep-learning-model-on-arivis-cloud)
     - [Use the model in your python code](#use-the-model-in-your-python-code)
@@ -9,24 +10,32 @@
     - [Train a simple model for regression](#train-a-simple-model-for-regression)
   - [Use the model inside Napari (optional)](#use-the-model-inside-napari-optional)
   - [Using the czitools package (experimental)](#using-the-czitools-package-experimental)
-    - [Demo Notebooks using czitools](#demo-notebooks-using-czitools)
-      - [Read CZI metadata](#read-czi-metadata)
-      - [Read CZI pixeldata](#read-czi-pixeldata)
-      - [Write OME-ZARR from 5D CZI image data](#write-ome-zarr-from-5d-czi-image-data)
-      - [Write CZI using ZSTD compression](#write-czi-using-zstd-compression)
-      - [Show planetable of a CZI image as surface](#show-planetable-of-a-czi-image-as-surface)
-      - [Read a CZI and segment using Voroni-Otsu provided by PyClesperanto GPU processing](#read-a-czi-and-segment-using-voroni-otsu-provided-by-pyclesperanto-gpu-processing)
+    - [Read CZI metadata](#read-czi-metadata)
+    - [Read CZI pixeldata](#read-czi-pixeldata)
+    - [Write OME-ZARR from 5D CZI image data](#write-ome-zarr-from-5d-czi-image-data)
+    - [Write CZI using ZSTD compression](#write-czi-using-zstd-compression)
+    - [Show planetable of a CZI image as surface](#show-planetable-of-a-czi-image-as-surface)
+    - [Read a CZI and segment using Voroni-Otsu provided by PyClesperanto GPU processing](#read-a-czi-and-segment-using-voroni-otsu-provided-by-pyclesperanto-gpu-processing)
   - [Control ZEN via TCP-IP](#control-zen-via-tcp-ip)
   - [Create a simple arivis Cloud Module](#create-a-simple-arivis-cloud-module)
-- [Disclaimer](#disclaimer)
+
+# Disclaimer
+
+This content of this repository is free to use for everybody and purely experimental. Carl Zeiss Microscopy GmbH's ZEN software undertakes no warranty concerning the use of those scripts, image analysis settings and ZEN experiments, especially not for the examples using 3rd python modules. Use them on your own risk.
+
+**By using any of those examples you agree to this disclaimer.**
+
+Version: 2023.09.27
+
+Copyright (c) 2023 Carl Zeiss AG, Germany. All Rights Reserved.
 
 # General Remarks
 
-This repository contains all the material for the workshop held during the ZEN & Python & OAD Workshop.
+This repository contains scripts and notebooks showcasing several tools and scripts centered around ZEN, CZI image files, deep-learning models and related python packages.
 
 ***
 
-## Prerequisites
+# Prerequisites
 
 To run the notebooks locally it is recommended to create a fresh conda environment. Please feel free to use the provided [YML file](workshop/zen_python.yml) (at your own risk) to create such an environment:
 
@@ -36,9 +45,9 @@ To run the notebooks locally it is recommended to create a fresh conda environme
 > 
 > To use [Colab] one needs to have a Google account.
 >
-> To test and run an Arivis Cloud module locally one needs [Docker Desktop] or an equivivalent runtime installed
+> To test and run an [arivis Cloud] module locally one needs [Docker Desktop] or an equivalent runtime installed
 
-## Content
+# Content
 
 The workshop is focusing on various tools and python packages published by ZEISS for reading CZI images, exchanging Deep-Learning models and general image processing tasks. The following topics will be covered:
 
@@ -120,33 +129,31 @@ For more detailed information about the plugin please go to: [Napari Hub - napar
 
 ***
 
-## Using the czitools package (experimental)
+## Using the [czitools] package (experimental)
 
 For details please visit: [czitools]
 
-### Demo Notebooks using [czitools]
-
-#### Read CZI metadata
+### Read CZI metadata
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sebi06/czitools/blob/main/demo/notebooks/read_czi_metadata.ipynb)
 
-#### Read CZI pixeldata
+### Read CZI pixeldata
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sebi06/czitools/blob/main/demo/notebooks/read_czi_pixeldata.ipynb)
 
-#### Write OME-ZARR from 5D CZI image data
+### Write OME-ZARR from 5D CZI image data
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sebi06/czitools/blob/main/demo/notebooks/omezarr_from_czi_5d.ipynb)
 
-#### Write CZI using ZSTD compression
+### Write CZI using ZSTD compression
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sebi06/czitools/blob/main/demo/notebooks/save_with_ZSTD_compression.ipynb)
 
-#### Show planetable of a CZI image as surface
+### Show planetable of a CZI image as surface
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sebi06/czitools/blob/main/demo/notebooks/show_czi_surface.ipynb)
 
-#### Read a CZI and segment using Voroni-Otsu provided by PyClesperanto GPU processing
+### Read a CZI and segment using Voroni-Otsu provided by PyClesperanto GPU processing
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sebi06/czitools/blob/main/demo/notebooks/read_czi_segment_voroni_otsu.ipynb)
 
@@ -175,15 +182,7 @@ A simple example module based on python can be found here: [arivis Cloud - Simpl
 
 Please follow the instruction on how to create an [arivis Cloud] module using the built-in documentation and copy this code into your own module repository.
 
-# Disclaimer
 
-This content of this repository is free to use for everybody and purely experimental. Carl Zeiss Microscopy GmbH's ZEN software undertakes no warranty concerning the use of those scripts, image analysis settings and ZEN experiments, especially not for the examples using 3rd python modules. Use them on your own risk.
-
-**By using any of those examples you agree to this disclaimer.**
-
-Version: 2023.09.27
-
-Copyright (c) 2023 Carl Zeiss AG, Germany. All Rights Reserved.
 
 [Napari]: https://github.com/napari/napari
 [pip]: https://pypi.org/project/pip/
