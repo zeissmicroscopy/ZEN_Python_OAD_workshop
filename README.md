@@ -261,7 +261,7 @@ Start the executable from the command line, providing the required command line 
 - Designed to work with large CZI collections
 - Multi-threaded processing
 - Strictly non-destructive
-- Developed as a private repo on GitHub => release as OSS planned (GPL 3.0)
+- Developed as a private repo on GitHub => release as OSS planned
 
 ![CZIShrink](./images/CZIShrink_win11_running.png)
 
