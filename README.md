@@ -17,13 +17,13 @@
     - [Show planetable of a CZI image as surface](#show-planetable-of-a-czi-image-as-surface)
     - [Read a CZI and segment using Voroni-Otsu provided by PyClesperanto GPU processing](#read-a-czi-and-segment-using-voroni-otsu-provided-by-pyclesperanto-gpu-processing)
   - [Control ZEN via TCP-IP](#control-zen-via-tcp-ip)
-  - [Create a simple arivis Cloud Module](#create-a-simple-arivis-cloud-module)
   - [CZICompress](#czicompress)
     - [General usage](#general-usage)
     - [Usage example for single files from commandline (cmd.exe)](#usage-example-for-single-files-from-commandline-cmdexe)
     - [Usage example with multiple files (bash)](#usage-example-with-multiple-files-bash)
-    - [CZIShrink](#czishrink)
+  - [CZIShrink](#czishrink)
   - [CZICheck](#czicheck)
+  - [Create a simple arivis Cloud Module](#create-a-simple-arivis-cloud-module)
 
 # Disclaimer
 
@@ -64,6 +64,7 @@ The workshop is focusing on various tools and python packages published by ZEISS
 - Use the model inside [Napari]
 - Using [czitools] package
 - Control ZEN via TCP-IP from [Napari]
+- [CZICompress], [CZIShrink] and [CZIChecker] - tools built around the CZI image format and its APIs
 - Create a simple [arivis Cloud] module to use your own code in ZEN
 
 ## Read, process and write CZIs using pylibCZIrw
@@ -172,21 +173,6 @@ Please check the respective code: [napari_zen_connect.py](./workshop/napari_zen_
 
 > Important: This requires that one has a real or simulated microscope controlled by ZEN that can actually execute the experiment
 
-
-## Create a simple arivis Cloud Module
-
-The [arivis Cloud] platform does not allow to train deep learning models but also has tools to create so-called arivis Cloud modules and even workflows built upon a container infrastructure.
-
-![arivis Cloud Architecture](./images/apeer_architecture2.png)
-
-In short - arivis Cloud modules are Docker containers with a UI specification that allows using them in the cloud and inside the ZEN software platform. For details please visit: [arivis Cloud - Architecture and Modules](https://docs.apeer.com/create-modules/the-apeer-architecture)
-
-![Module - UI Creation](./images/apeer_module_ui2.png)
-
-A simple example module based on python can be found here: [arivis Cloud - Simple Python Module](./workshop/apeer_module_example/README.md)
-
-Please follow the instruction on how to create an [arivis Cloud] module using the built-in documentation and copy this code into your own module repository.
-
 ## CZICompress
 
 Starting with ZEN 3.9 ZSTD (Z-Standard) will be the new default compression method in ZEN (it was already available longer), but obviously there are already many existing CZI image files "out there" and how to deal with existing ZEN installations that can read uncompressed CZIs but not compressed CZIs?
@@ -268,7 +254,7 @@ Start the executable from the command line, providing the required command line 
 
 ![CZICompress in Action in Ubuntu](./images/czicompress_linux_bash.gif)
 
-### CZIShrink
+## CZIShrink
 
 - Cross Platform GUI App
 - Developed, tested and released on Win-x64 and Linux-x64
@@ -296,6 +282,22 @@ Each *checker* reports back findings of type Fatal, Warn, or Info.
 Please check the tool's internal help by running `CZICheck.exe --help` and check additional documentation on the repository.
 
 ![CZIChecker in Action](./images/czichecker1.png)
+
+## Create a simple arivis Cloud Module
+
+The [arivis Cloud] platform does not allow to train deep learning models but also has tools to create so-called arivis Cloud modules and even workflows built upon a container infrastructure.
+
+![arivis Cloud Architecture](./images/apeer_architecture2.png)
+
+In short - arivis Cloud modules are Docker containers with a UI specification that allows using them in the cloud and inside the ZEN software platform. For details please visit: [arivis Cloud - Architecture and Modules](https://docs.apeer.com/create-modules/the-apeer-architecture)
+
+![Module - UI Creation](./images/apeer_module_ui2.png)
+
+A simple example module based on python can be found here: [arivis Cloud - Simple Python Module](./workshop/apeer_module_example/README.md)
+
+Please follow the instruction on how to create an [arivis Cloud] module using the built-in documentation and copy this code into your own module repository.
+
+
 
 [Napari]: https://github.com/napari/napari
 [pip]: https://pypi.org/project/pip/
