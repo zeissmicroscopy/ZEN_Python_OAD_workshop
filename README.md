@@ -18,6 +18,12 @@
     - [Read a CZI and segment using Voroni-Otsu provided by PyClesperanto GPU processing](#read-a-czi-and-segment-using-voroni-otsu-provided-by-pyclesperanto-gpu-processing)
   - [Control ZEN via TCP-IP](#control-zen-via-tcp-ip)
   - [Create a simple arivis Cloud Module](#create-a-simple-arivis-cloud-module)
+  - [CZICompress](#czicompress)
+    - [General usage](#general-usage)
+    - [Usage example for single files from commandline (cmd.exe)](#usage-example-for-single-files-from-commandline-cmdexe)
+    - [Usage example with multiple files (bash)](#usage-example-with-multiple-files-bash)
+    - [CZIShrink](#czishrink)
+  - [CZICheck](#czicheck)
 
 # Disclaimer
 
@@ -181,11 +187,119 @@ A simple example module based on python can be found here: [arivis Cloud - Simpl
 
 Please follow the instruction on how to create an [arivis Cloud] module using the built-in documentation and copy this code into your own module repository.
 
+## CZICompress
 
+Starting with ZEN 3.9 ZSTD (Z-Standard) will be the new default compression method in ZEN (it was already available longer), but obviously there are already many existing CZI image files "out there" and how to deal with existing ZEN installations that can read uncompressed CZIs but not compressed CZIs?
+
+Therefore we created a command line tool:
+
+- compress or decompress a single CZI file
+- versatile
+- scriptable
+- run in headless/server environments
+- run in cron jobs
+- cross-platform (focus on linux-x64 and win-x64)
+- developed private repo [CZICompress], but will be public very soon
+
+### General usage
+
+Start the executable from the command line, providing the required command line arguments.
+
+    Usage: czicompress [OPTIONS]
+
+    Options:
+    -h,--help         Print this help message and exit
+
+    -c,--command COMMAND
+                        Specifies the mode of operation: 'compress' to convert to a
+                        zstd-compressed CZI, 'decompress' to convert to a CZI
+                        containing only uncompressed data.
+
+    -i,--input SOURCE_FILE
+                        The source CZI-file to be processed.
+
+    -o,--output DESTINATION_FILE
+                        The destination CZI-file to be written.
+
+    -s,--strategy STRATEGY
+                        Choose which subblocks of the source file are compressed.
+                        STRATEGY can be one of 'all', 'uncompressed',
+                        'uncompressed_and_zstd'. The default is 'uncompressed'.
+
+    -t,--compression_options COMPRESSION_OPTIONS
+                        Specify compression parameters. The default is
+                        'zstd1:ExplicitLevel=0;PreProcess=HiLoByteUnpack'.
+
+
+    Copies the content of a CZI-file into another CZI-file changing the compression
+    of the image data.
+    With the 'compress' command, uncompressed image data is converted to
+    Zstd-compressed image data. This can reduce the file size substantially. With
+    the 'decompress' command, compressed image data is converted to uncompressed
+    data.
+    For the 'compress' command, a compression strategy can be specified with the
+    '--strategy' option. It controls which subblocks of the source file will be
+    compressed. The source document may already contain compressed data (possibly
+    with a lossy compression scheme). In this case it is undesirable to compress the
+    data with lossless zstd, as that will almost certainly increase the file size.
+    Therefore, the "uncompressed" strategy compresses only uncompressed subblocks.
+    The "uncompressed_and_zstd" strategy compresses the subblocks that are
+    uncompressed OR compressed with Zstd, and the "all" strategy compresses all
+    subblocks, regardless of their current compression status. Some compression
+    schemes that can occur in a CZI-file cannot be decompressed by this tool. Data
+    compressed with such a scheme will be copied verbatim to the destination file,
+    regardless of the command and strategy chosen.
+
+
+### Usage example for single files from commandline (cmd.exe)
+
+    SET PATH=$PATH;C:\Users\y1mrn\Downloads\czicompress
+    cd /D D:\TestData
+
+    czicompress --command compress -i LLS-31Timepoints-2Channels.czi -o compressed.czi
+
+
+### Usage example with multiple files (bash)
+
+    export PATH=$PATH:/c/Users/y1mrn/Downloads/czicompress
+    cd /d/TestData
+
+    find -type f -name '*.czi' -not -iname '*zstd*' -exec czicompress.sh '{}' \;
+
+![CZICompress in Action in Ubuntu](./images/czicompress_linux_bash.gif)
+
+### CZIShrink
+
+- Cross Platform GUI App
+- Developed, tested and released on Win-x64 and Linux-x64
+- Designed to work with large CZI collections (M-Drive)
+- Multi-threaded processing
+- Strictly non-destructive
+- Developed as a private repo on GitHub => release as OSS planned (GPL 3.0)
+
+![CZIShrink](./images/CZIShrink_win11_running.png)
+
+![CZIShrink - Share](./images/CZIShrink_win11_badge.png)
+
+![CZIShrink in Action](images/czishrink_linux.gif)
+
+## CZICheck
+
+CZICheck is a command-line application developed using libCZI, enabling users to assess the integrity and structural correctness of a CZI document.
+
+Checking the validity of a CZI becomes more complex the closer one is to the application domain (e.g. application-specific metadata).
+So this console application is more of a utility to help users who are directly using libCZI, or its python wrapper [pylibCZIrw], than it is an official validation tool for any ZEISS-produced CZIs.
+
+CZICheck runs a collection of *checkers* which evaluate a well defined rule.
+Each *checker* reports back findings of type Fatal, Warn, or Info.
+
+Please check the tool's internal help by running `CZICheck.exe --help` and check additional documentation on the repository.
+
+![CZIChecker in Action](./images/czichecker1.png)
 
 [Napari]: https://github.com/napari/napari
 [pip]: https://pypi.org/project/pip/
-[PyPI]: https://pypi.org/
+[PyPi]: https://pypi.org/
 [pylibCZIrw]: https://pypi.org/project/pylibCZIrw/
 [czmodel]: https://pypi.org/project/czmodel/
 [cztile]: https://pypi.org/project/cztile/
@@ -199,3 +313,5 @@ Please follow the instruction on how to create an [arivis Cloud] module using th
 [czitools]: https://pypi.org/project/czitools/
 [Colab]: https://colab.research.google.com/
 [Docker Desktop]: https://www.docker.com/products/docker-desktop/
+[CZICompress]: https://github.com/zeissmicroscopy/czicompress/
+[CZIChecker]: https://github.com/ZEISS/czicheck/

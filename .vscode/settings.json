@@ -2,5 +2,10 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
     },
-    "python.formatting.provider": "none"
+    "python.formatting.provider": "none",
+    "cSpell.words": [
+        "scriptable",
+        "subblocks",
+        "ZSTD"
+    ]
 }
