@@ -258,7 +258,7 @@ Start the executable from the command line, providing the required command line 
 
 - Cross Platform GUI App
 - Developed, tested and released on Win-x64 and Linux-x64
-- Designed to work with large CZI collections (M-Drive)
+- Designed to work with large CZI collections
 - Multi-threaded processing
 - Strictly non-destructive
 - Developed as a private repo on GitHub => release as OSS planned (GPL 3.0)
