@@ -31,7 +31,7 @@ This content of this repository is free to use for everybody and purely experime
 
 **By using any of those examples you agree to this disclaimer.**
 
-Version: 2023.09.27
+Version: 2023.10.19
 
 Copyright (c) 2023 Carl Zeiss AG, Germany. All Rights Reserved.
 
@@ -315,5 +315,5 @@ Please follow the instruction on how to create an [arivis Cloud] module using th
 [czitools]: https://pypi.org/project/czitools/
 [Colab]: https://colab.research.google.com/
 [Docker Desktop]: https://www.docker.com/products/docker-desktop/
-[CZICompress]: https://github.com/zeissmicroscopy/czicompress/
+[CZICompress]: https://github.com/ZEISS/czicompress/
 [CZIChecker]: https://github.com/ZEISS/czicheck/
