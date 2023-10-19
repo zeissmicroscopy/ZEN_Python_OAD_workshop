@@ -20,7 +20,7 @@
     - [General usage](#general-usage)
     - [Usage example for single files from commandline (cmd.exe)](#usage-example-for-single-files-from-commandline-cmdexe)
     - [Usage example with multiple files (bash)](#usage-example-with-multiple-files-bash)
-  - [CZIShrink - Cpmpress CZI image files from a cross-platform UI](#czishrink---cpmpress-czi-image-files-from-a-cross-platform-ui)
+  - [CZIShrink - Compress CZI image files from a cross-platform UI](#czishrink---compress-czi-image-files-from-a-cross-platform-ui)
   - [CZICheck - Check CZI for internal errors](#czicheck---check-czi-for-internal-errors)
   - [Control ZEN via TCP-IP (from Napari)](#control-zen-via-tcp-ip-from-napari)
   - [Create a simple arivis Cloud Module](#create-a-simple-arivis-cloud-module)
@@ -175,7 +175,7 @@ Therefore we created a command line tool:
 - run in headless/server environments
 - run in cron jobs
 - cross-platform (focus on linux-x64 and win-x64)
-- public Github reporsitory: [CZICompress]
+- public Github repository: [CZICompress]
 
 ### General usage
 
@@ -244,7 +244,7 @@ Start the executable from the command line, providing the required command line 
 
 ![CZICompress in Action in Ubuntu](./images/czicompress_linux_bash.gif)
 
-## CZIShrink - Cpmpress CZI image files from a cross-platform UI
+## CZIShrink - Compress CZI image files from a cross-platform UI
 
 - Cross Platform GUI App
 - Developed, tested and released on Win-x64 and Linux-x64
