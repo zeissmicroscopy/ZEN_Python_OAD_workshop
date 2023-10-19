@@ -16,13 +16,13 @@
     - [Write CZI using ZSTD compression](#write-czi-using-zstd-compression)
     - [Show planetable of a CZI image as surface](#show-planetable-of-a-czi-image-as-surface)
     - [Read a CZI and segment using Voroni-Otsu provided by PyClesperanto GPU processing](#read-a-czi-and-segment-using-voroni-otsu-provided-by-pyclesperanto-gpu-processing)
-  - [Control ZEN via TCP-IP](#control-zen-via-tcp-ip)
-  - [CZICompress](#czicompress)
+  - [CZICompress - Compress CZI image files from the commandline](#czicompress---compress-czi-image-files-from-the-commandline)
     - [General usage](#general-usage)
     - [Usage example for single files from commandline (cmd.exe)](#usage-example-for-single-files-from-commandline-cmdexe)
     - [Usage example with multiple files (bash)](#usage-example-with-multiple-files-bash)
-  - [CZIShrink](#czishrink)
-  - [CZICheck](#czicheck)
+  - [CZIShrink - Cpmpress CZI image files from a cross-platform UI](#czishrink---cpmpress-czi-image-files-from-a-cross-platform-ui)
+  - [CZICheck - Check CZI for internal errors](#czicheck---check-czi-for-internal-errors)
+  - [Control ZEN via TCP-IP (from Napari)](#control-zen-via-tcp-ip-from-napari)
   - [Create a simple arivis Cloud Module](#create-a-simple-arivis-cloud-module)
 
 # Disclaimer
@@ -63,8 +63,8 @@ The workshop is focusing on various tools and python packages published by ZEISS
 - Use the model in your python code
 - Use the model inside [Napari]
 - Using [czitools] package
-- Control ZEN via TCP-IP from [Napari]
 - [CZICompress], [CZIShrink] and [CZIChecker] - tools built around the CZI image format and its APIs
+- Control ZEN via TCP-IP from [Napari]
 - Create a simple [arivis Cloud] module to use your own code in ZEN
 
 ## Read, process and write CZIs using pylibCZIrw
@@ -163,17 +163,7 @@ For details please visit: [czitools]
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sebi06/czitools/blob/main/demo/notebooks/read_czi_segment_voroni_otsu.ipynb)
 
-## Control ZEN via TCP-IP
-
-For details please check: [ZEN - TCP-IP Interface](https://github.com/zeiss-microscopy/OAD/tree/master/Interfaces/TCP-IP_interface)
-
-THis repo contains an example on how to control ZEN from Napari. It allows to start an experiment and remotely and open the CZI inside the Napari viewer
-
-Please check the respective code: [napari_zen_connect.py](./workshop/napari_zen_connect/napari_zen_connect.py)
-
-> Important: This requires that one has a real or simulated microscope controlled by ZEN that can actually execute the experiment
-
-## CZICompress
+## CZICompress - Compress CZI image files from the commandline
 
 Starting with ZEN 3.9 ZSTD (Z-Standard) will be the new default compression method in ZEN (it was already available longer), but obviously there are already many existing CZI image files "out there" and how to deal with existing ZEN installations that can read uncompressed CZIs but not compressed CZIs?
 
@@ -185,7 +175,7 @@ Therefore we created a command line tool:
 - run in headless/server environments
 - run in cron jobs
 - cross-platform (focus on linux-x64 and win-x64)
-- developed private repo [CZICompress], but will be public very soon
+- public Github reporsitory: [CZICompress]
 
 ### General usage
 
@@ -254,14 +244,14 @@ Start the executable from the command line, providing the required command line 
 
 ![CZICompress in Action in Ubuntu](./images/czicompress_linux_bash.gif)
 
-## CZIShrink
+## CZIShrink - Cpmpress CZI image files from a cross-platform UI
 
 - Cross Platform GUI App
 - Developed, tested and released on Win-x64 and Linux-x64
 - Designed to work with large CZI collections
 - Multi-threaded processing
 - Strictly non-destructive
-- Developed as a private repo on GitHub => release as OSS planned
+- Developed still as a private repo on GitHub => release as OSS planned soon
 
 ![CZIShrink](./images/CZIShrink_win11_running.png)
 
@@ -269,7 +259,7 @@ Start the executable from the command line, providing the required command line 
 
 ![CZIShrink in Action](images/czishrink_linux.gif)
 
-## CZICheck
+## CZICheck - Check CZI for internal errors
 
 CZICheck is a command-line application developed using libCZI, enabling users to assess the integrity and structural correctness of a CZI document.
 
@@ -282,6 +272,16 @@ Each *checker* reports back findings of type Fatal, Warn, or Info.
 Please check the tool's internal help by running `CZICheck.exe --help` and check additional documentation on the repository.
 
 ![CZIChecker in Action](./images/czichecker1.png)
+
+## Control ZEN via TCP-IP (from Napari)
+
+For details please check: [ZEN - TCP-IP Interface](https://github.com/zeiss-microscopy/OAD/tree/master/Interfaces/TCP-IP_interface)
+
+THis repo contains an example on how to control ZEN from Napari. It allows to start an experiment and remotely and open the CZI inside the Napari viewer
+
+Please check the respective code: [napari_zen_connect.py](./workshop/napari_zen_connect/napari_zen_connect.py)
+
+> Important: This requires that one has a real or simulated microscope controlled by ZEN that can actually execute the experiment.
 
 ## Create a simple arivis Cloud Module
 
