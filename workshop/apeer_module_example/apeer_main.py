@@ -1,7 +1,6 @@
 ﻿from apeer_dev_kit import adk
 import apply_filter
 
-
 if __name__ == "__main__":
 
     # get the inputs from module
